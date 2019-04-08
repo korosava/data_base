@@ -33,10 +33,10 @@ CREATE TABLE `zoo`.`roles` (
 
 CREATE TABLE `zoo`.`staff` (
 	`staff_id` INT NOT NULL AUTO_INCREMENT,
-	`full name` VARCHAR(255) NOT NULL,
+	`full_name` VARCHAR(255) NOT NULL,
 	`age` INT NOT NULL,
-	`phone number` VARCHAR(255) NOT NULL,
-	`home address` VARCHAR(255) NOT NULL,
+	`phone_number` VARCHAR(255) NOT NULL,
+	`home_address` VARCHAR(255) NOT NULL,
 	`mail` VARCHAR(255) NOT NULL,
 	`gender` VARCHAR(255) NOT NULL,
 	`experience` VARCHAR(255) NOT NULL,
