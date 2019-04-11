@@ -3,7 +3,7 @@
 #    запитати про unique і відношення (багато-1)   #
 
 
-#drop database `zoo`;
+drop database `zoo`;
 CREATE SCHEMA `zoo` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
 
 CREATE TABLE `zoo`.`medicine` (
@@ -60,7 +60,7 @@ CREATE TABLE `zoo`.`staff_role` (
 CREATE TABLE `zoo`.`cleaning` (
 	`clean_id` INT NOT NULL AUTO_INCREMENT,
 	`staff_role_id` INT NOT NULL,
-    `date` DATE NOT NULL,
+    `dateTime` DATETIME NOT NULL,
 	PRIMARY KEY (`clean_id`)
     ,
     constraint staff_role_fk_3 foreign key (staff_role_id)
@@ -81,7 +81,7 @@ CREATE TABLE `zoo`.`feeding` (
 	`feeding_id` INT NOT NULL AUTO_INCREMENT,
 	`meal_id` INT NOT NULL,
 	`portion` FLOAT NOT NULL,
-	`date` DATE NOT NULL,
+	`dateTime` DATETIME NOT NULL,
 	`staff_role_id` INT NOT NULL UNIQUE,
 	PRIMARY KEY (`feeding_id`)
     ,
@@ -127,17 +127,6 @@ CREATE TABLE `zoo`.`healing` (
     references zoo.staff_role (staff_role_id) on delete cascade on update cascade
 );
 
-create table zoo.staff_exp(
-staff_exp_id int not null auto_increment,
-staff_role_id int not null,
-start_work datetime not null,
-stop_work datetime not null
-,
-primary key (staff_exp_id)
-,
-constraint staff_role_fk_4 foreign key (staff_role_id)
-references zoo.staff_role (staff_role_id) on delete no action on update cascade 
-);
 
 
 #ALTER TABLE `staff_Role` ADD CONSTRAINT `staff_Role_fk0` FOREIGN KEY (`role_id`) REFERENCES `Role`(`role_id`);
