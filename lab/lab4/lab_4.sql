@@ -3,14 +3,14 @@
 #    запитати про unique і відношення (багато-1)   #
 
 
-drop database `zoo`;
+#drop database `zoo`;
 CREATE SCHEMA `zoo` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
 
 CREATE TABLE `zoo`.`medicine` (
 	`medicine_id` INT NOT NULL AUTO_INCREMENT,
 	`kind` VARCHAR(255) NOT NULL,
 	`producer` VARCHAR(255) NOT NULL,
-	`expiration_date` TIME NOT NULL,
+	`expiration_date` DATE NOT NULL,
 	PRIMARY KEY (`medicine_id`)
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE `zoo`.`meal` (
 	`amount` FLOAT NOT NULL,
 	`kind` VARCHAR(255) NOT NULL,
 	`producer` VARCHAR(255) NOT NULL,
-	`expiration_date` VARCHAR(255) NOT NULL,
+	`expiration_date` DATE NOT NULL,
 	PRIMARY KEY (`meal_id`)
 );
 
@@ -95,7 +95,7 @@ CREATE TABLE `zoo`.`feeding` (
 CREATE TABLE `zoo`.`animal` (
 	`animal_id` INT NOT NULL AUTO_INCREMENT,
 	`kind` VARCHAR(255) NOT NULL,
-	`birth` TIME NOT NULL,
+	`birth` DATE NOT NULL,
 	`healthy` BOOLEAN NOT NULL,
 	`weight` FLOAT NOT NULL,
     `location_id` INT NOT NULL,
