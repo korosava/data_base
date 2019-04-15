@@ -4,7 +4,7 @@
 
 
 drop database `zoo`;
-CREATE SCHEMA `zoo`;
+CREATE SCHEMA `zoo` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
 
 CREATE TABLE `zoo`.`medicine` (
 	`medicine_id` INT NOT NULL AUTO_INCREMENT,
