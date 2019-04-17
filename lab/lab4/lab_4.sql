@@ -1,7 +1,6 @@
-
-
-#    запитати про unique і відношення (багато-1)   #
-
+#
+#	C:\ProgramData\MySQL\MySQL Server 8.0\Uploads
+#
 
 drop database `zoo`;
 CREATE SCHEMA `zoo`;
@@ -81,32 +80,44 @@ CREATE TABLE `zoo`.`feeding` (
 	`feeding_id` INT NOT NULL AUTO_INCREMENT,
 	`meal_id` INT NOT NULL,
 	`portion` FLOAT NOT NULL,
-	`date_time` DATETIME NOT NULL,
-	`staff_role_id` INT NOT NULL,
 	PRIMARY KEY (`feeding_id`)
     ,
     constraint meal_fk foreign key (meal_id)
     references zoo.meal (meal_id) on delete no action on update cascade
-    ,
-    constraint staff_role_fk_2 foreign key (staff_role_id)
-    references zoo.staff_role (staff_role_id) on delete cascade on update cascade
 );
+
 
 CREATE TABLE `zoo`.`animal` (
 	`animal_id` INT NOT NULL AUTO_INCREMENT,
 	`kind` VARCHAR(255) NOT NULL,
-	`birth` DATE NOT NULL,
+	`birth_date` DATE NOT NULL,
 	`healthy` BOOLEAN NOT NULL,
 	`weight` FLOAT NOT NULL,
     `location_id` INT NOT NULL,
-    `feeding_id` INT NOT NULL,
+    `gender` VARCHAR(8) NOT NULL,
 	PRIMARY KEY (`animal_id`)
     ,
     constraint location_fk_1 foreign key (location_id)
     references zoo.location (location_id) on delete cascade on update cascade
+);
+
+CREATE TABLE `zoo`.`feeding_schedule` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+    `feeding_id` INT NOT NULL,
+    `animal_id` INT NOT NULL,
+    `feeding_time` TIME NOT NULL,
+    `staff_role_id` INT NOT NULL
+    ,
+    PRIMARY KEY (`id`)
     ,
     constraint feeding_fk_1 foreign key (feeding_id)
     references zoo.feeding (feeding_id) on delete cascade on update cascade
+    ,
+    constraint animal_fk_1 foreign key (animal_id)
+    references zoo.animal (animal_id) on delete cascade on update cascade
+    ,
+    constraint staff_role_fk_2 foreign key (staff_role_id)
+    references zoo.staff_role (staff_role_id) on delete cascade on update cascade
 );
 
 CREATE TABLE `zoo`.`healing` (
@@ -132,12 +143,3 @@ CREATE TABLE `zoo`.`healing` (
 
 
 #ALTER TABLE `staff_Role` ADD CONSTRAINT `staff_Role_fk0` FOREIGN KEY (`role_id`) REFERENCES `Role`(`role_id`);
-#ALTER TABLE `staff_Role` ADD CONSTRAINT `staff_Role_fk1` FOREIGN KEY (`staff_id`) REFERENCES `staff`(`staff_id`);
-#ALTER TABLE `Feeding` ADD CONSTRAINT `Feeding_fk0` FOREIGN KEY (`animal_id`) REFERENCES `Animal`(`animal_id`);
-#ALTER TABLE `Feeding` ADD CONSTRAINT `Feeding_fk1` FOREIGN KEY (`meal_id`) REFERENCES `Meal`(`meal_id`);
-#ALTER TABLE `Feeding` ADD CONSTRAINT `Feeding_fk2` FOREIGN KEY (`staff_role_id`) REFERENCES `staff_Role`(`staff_role_id`);
-#ALTER TABLE `Healing` ADD CONSTRAINT `Healing_fk0` FOREIGN KEY (`medicine_id`) REFERENCES `Medicine`(`medicine_id`);
-#ALTER TABLE `Healing` ADD CONSTRAINT `Healing_fk1` FOREIGN KEY (`animal_id`) REFERENCES `Animal`(`animal_id`);
-#ALTER TABLE `Healing` ADD CONSTRAINT `Healing_fk2` FOREIGN KEY (`staff_role_id`) REFERENCES `staff_Role`(`staff_role_id`);
-#ALTER TABLE `Cleaning` ADD CONSTRAINT `Cleaning_fk0` FOREIGN KEY (`location_id`) REFERENCES `Locations`(`location_id`);
-#ALTER TABLE `Cleaning` ADD CONSTRAINT `Cleaning_fk1` FOREIGN KEY (`staff_role_id`) REFERENCES `staff_Role`(`staff_role_id`);
