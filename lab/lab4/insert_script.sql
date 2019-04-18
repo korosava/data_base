@@ -15,7 +15,8 @@ load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/animal.tbl' into
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/healing.tbl' into table healing lines terminated by '\n' (`medicine_id`, `animal_id`, `staff_role_id`, `date_time`);
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/feeding_schedule.tbl' into table feeding_schedule lines terminated by '\n' (`feeding_id`, `animal_id`, `feeding_time`, `staff_role_id`);
 /**/
-select * from staff_role;
+#describe roles;
+
 /*/
 # <============================================_FK_TABLES======================================>
 update meal set expiration_date='2019-05-07' where meal_id=1;
