@@ -1,4 +1,4 @@
-/*/
+/**/
 # проекція, вибираю деякі стовпці
 create view staff_3 as select distinct staff_id,full_name,age,experience from staff;
 select * from staff_3;
@@ -10,8 +10,11 @@ select * from staff_3 where age < 37;
 select staff_role_id, role_id, staff_3.staff_id, full_name, age, experience from staff_role, staff_3
 where staff_3.staff_id = staff_role.staff_id
 
-# select + натуральне з'єднання
+# дод. умова + натуральне з'єднання - умовне з'єднання
 select staff_role_id, role_id, staff_3.staff_id, full_name, age, experience from staff_role, staff_3
 where staff_3.staff_id = staff_role.staff_id
 and age < 37;
+
+# порядок операторів
+select * from staff where age>35 order by age desc limit 1;
 /**/

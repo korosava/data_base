@@ -13,7 +13,7 @@ load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/location.tbl' in
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/feeding.tbl' into table feeding lines terminated by '\n';
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/animal.tbl' into table animal lines terminated by '\n' (`kind`,`birth_date`,`healthy`,`weight`,`location_id`,`gender`);
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/healing.tbl' into table healing lines terminated by '\n' (`medicine_id`, `animal_id`, `staff_role_id`, `date_time`);
-load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/feeding_schedule.tbl' into table feeding_schedule lines terminated by '\n' (`feeding_id`, `animal_id`, `feeding_time`, `staff_role_id`);
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/feeding_schedule.tbl' into table feeding_schedule lines terminated by '\n' (`staff_role_id`, `animal_id`, `feeding_time`, `feeding_id`);
 /**/
 #describe roles;
 
