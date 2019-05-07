@@ -64,7 +64,6 @@ inner join staff on staff.staff_id = staff_role.staff_id
 group by full_name
 ;
 
-
 # найбільша вага тварини серед її виду за зростонням, та в якій локації вона живе
 select kind, max(weight), location_name from animal
 inner join location on animal.location_id = location.location_id
