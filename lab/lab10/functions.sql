@@ -61,7 +61,7 @@ select animal_id, kind, fn1(weight) as norm_weight from animal;
 /**/
 
 
-/**/
+/* /
 drop procedure if exists staff_info;
 delimiter //
 # процедура, повертає інформацію про працівників, якщо введено правильний пароль
@@ -80,5 +80,21 @@ call staff_info(aes_encrypt('pass', 'private_key'));
 /**/
 
 
-
-
+/**/
+drop procedure if exists meal_info;
+delimiter //
+create procedure meal_info(in in_meal_name varchar(32))
+begin
+	select animal.animal_id, animal.kind as animal_kind, meal_name, (meal_amount/(feeding.portion*2)) as meal_on_days from feeding_schedule
+    inner join animal on animal.animal_id = feeding_schedule.animal_id
+    inner join feeding on feeding.feeding_id = feeding_schedule.feeding_id
+    inner join 
+    (select meal.meal_id, meal.name as meal_name, meal.amount as meal_amount from meal where meal.name = in_meal_name)
+    as m1 on m1.meal_id = feeding.meal_id
+    ;
+end //
+delimiter ;
+start transaction;
+call meal_info('''nut''');
+call meal_info('''banana''');
+commit;

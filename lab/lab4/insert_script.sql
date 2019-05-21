@@ -1,5 +1,5 @@
 use zoo;
-/*/
+/**/
 # <============================================_PRIMARY_TABLES======================================>
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/medicine.tbl' into table medicine lines terminated by '\n';
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/meal.tbl' into table meal lines terminated by '\n';
