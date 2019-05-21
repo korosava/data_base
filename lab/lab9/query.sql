@@ -1,3 +1,4 @@
+use zoo;
 # середній вік працівників зоопарку
 select avg(age) as average_age from staff;
 
@@ -24,7 +25,6 @@ select * from roles
 where not exists
 (select salary from roles where salary<1000)
 ;
-
 # всі тварини з healing, які їдять банани
 select animal_id, kind, name
 from(
@@ -39,8 +39,35 @@ any(
 select animal_id from healing
 )
 ;
+select kind,full_name,date_time
+from (
+select	animal.kind, staff.full_name, healing.date_time
+from healing
+inner join animal on healing.animal_id = animal.animal_id
+inner join staff_role on healing.staff_role_id = staff_role.staff_role_id
+inner join staff on staff_role.staff_id = staff.staff_id
+) as s1
+where date_time = '2020-04-19 6:00:00';
 
-select * from healing;
+select kind as animal, full_name as staff_name, location_name,date_time
+from(
+select animal.kind, staff.full_name, location.location_name,cleaning.date_time
+from animal
+inner join location on animal.location_id = location.location_id
+inner join cleaning on location.clean_id = cleaning.clean_id
+inner join staff_role on cleaning.staff_role_id = staff_role.staff_role_id
+inner join staff on staff_role.staff_id = staff.staff_id 
+) as s2
+where date_time BETWEEN '2020-04-19 10:00:00' and '2020-05-19 10:00:00';
+
+
+select kind,weight,weight-(select std(weight) from animal) as norm_weight, (to_days('2019-05-11')-to_days(birth_date))/365 as age_years
+from animal
+where (to_days('2019-05-11')-to_days(birth_date))/365 > 1
+;
+
+select * from staff;
+
 
 
 
