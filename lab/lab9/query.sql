@@ -25,6 +25,8 @@ select * from roles
 where not exists
 (select salary from roles where salary<1000)
 ;
+
+
 # всі тварини з healing, які їдять банани
 select animal_id, kind, name
 from(
@@ -39,6 +41,8 @@ any(
 select animal_id from healing
 )
 ;
+
+
 select kind,full_name,date_time
 from (
 select	animal.kind, staff.full_name, healing.date_time
