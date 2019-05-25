@@ -1,5 +1,5 @@
 use zoo;
-/*/
+/* /
 delimiter //
 # міняє внесене значення - нормує вагу відносно кількості тварин даного типу
 drop trigger if exists tg1 //
@@ -58,7 +58,7 @@ select * from roles;
 /**/
 
 
-/**/
+/*/
 set autocommit=0;
 start transaction;
 delimiter //

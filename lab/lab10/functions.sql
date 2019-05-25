@@ -61,7 +61,7 @@ select animal_id, kind, fn1(weight) as norm_weight from animal;
 /**/
 
 
-/* /
+/*/
 drop procedure if exists staff_info;
 delimiter //
 # процедура, повертає інформацію про працівників, якщо введено правильний пароль
@@ -80,7 +80,7 @@ call staff_info(aes_encrypt('pass', 'private_key'));
 /**/
 
 
-/**/
+/* /
 drop procedure if exists meal_info;
 delimiter //
 create procedure meal_info(in in_meal_name varchar(32))
@@ -98,3 +98,22 @@ start transaction;
 call meal_info('''nut''');
 call meal_info('''banana''');
 commit;
+/**/
+
+select * from location;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

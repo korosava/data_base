@@ -1,13 +1,13 @@
 use zoo;
 
 
-/*/
+/**/
 create index health_index1 on animal (animal_id, healthy);
 create index name_index1 on meal (meal_id, `name`);
 show index from animal;
 show index from meal;
 /**/
-
+describe animal;
 
 /*/
 # всі тварини з healing, котрі їдять горіхи
