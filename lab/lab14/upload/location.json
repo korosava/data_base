@@ -1,0 +1,4 @@
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "location_name":"north", "clean_id":{"$oid": "5ce8630e7130b4193cfc8f61"} }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "location_name":"south", "clean_id":{"$oid": "5ce8630e7130b4193cfc8f62"} }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "location_name":"west", "clean_id":{"$oid": "5ce8630e7130b4193cfc8f63"} }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "location_name":"east", "clean_id":{"$oid": "5ce8630e7130b4193cfc8f64"} }

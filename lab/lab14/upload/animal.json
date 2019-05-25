@@ -1,0 +1,17 @@
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "kind":"elephant", "birth_date":"2005-04-09", "healthy":0, "weight": 5001.5, "location_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "kind":"elephant", "birth_date":"2003-04-09", "healthy":0, "weight": 4890.3, "location_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "kind":"elephant", "birth_date":"2018-04-09", "healthy":1, "weight": 1544.5, "location_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "kind":"monkey", "birth_date":"2004-04-09", "healthy":1, "weight": 31.0, "location_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f65"}, "kind":"monkey", "birth_date":"2006-04-09", "healthy":1, "weight": 30.0, "location_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f66"}, "kind":"monkey", "birth_date":"2008-04-09", "healthy":1, "weight": 25.0, "location_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f67"}, "kind":"monkey", "birth_date":"2004-04-09", "healthy":1, "weight": 26.0, "location_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f68"}, "kind":"monkey", "birth_date":"2017-04-09", "healthy":1, "weight": 15.0, "location_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f69"}, "kind":"monkey", "birth_date":"2019-01-09", "healthy":1, "weight": 10.0, "location_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f70"}, "kind":"tiger", "birth_date":"2007-04-09", "healthy":1, "weight": 275.5, "location_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f71"}, "kind":"tiger", "birth_date":"2007-04-09", "healthy":1, "weight": 291.9, "location_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f72"}, "kind":"tiger", "birth_date":"2003-04-09", "healthy":1, "weight": 165.1, "location_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f73"}, "kind":"tiger", "birth_date":"2002-04-09", "healthy":1, "weight": 157.8, "location_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f74"}, "kind":"kangaroo", "birth_date":"2005-04-01", "healthy":1, "weight": 27.8, "location_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f75"}, "kind":"kangaroo", "birth_date":"2005-04-01", "healthy":1, "weight": 26.3, "location_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "gender":"male" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f76"}, "kind":"kangaroo", "birth_date":"2015-04-01", "healthy":1, "weight": 23.1, "location_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "gender":"female" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f77"}, "kind":"kangaroo", "birth_date":"2019-03-01", "healthy":1, "weight": 15.1, "location_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "gender":"female" }

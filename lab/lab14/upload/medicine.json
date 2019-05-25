@@ -1,0 +1,3 @@
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "kind":"pillscc", "producer":"medical_boss", "expiration_date":"2021-04-09" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "kind":"mixture", "producer":"medical_boss", "expiration_date":"2021-04-08" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "kind":"vaccine", "producer":"medical_boss", "expiration_date":"2021-04-08" }

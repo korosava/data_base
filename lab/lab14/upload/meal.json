@@ -1,0 +1,4 @@
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "name":"nut", "amount":"120.1", "kind":"fruit", "producer":"nut_generation", "expiration_date":"2019-04-15" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "name":"banana", "amount":"50.1", "kind":"fruit", "producer":"banana_industries", "expiration_date":"2019-04-18" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "name":"pork", "amount":"300.2", "kind":"meat", "producer":"meat_imperia", "expiration_date":"2019-04-18" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "name":"hay", "amount":"200.0", "kind":"hay", "producer":"hay_studio", "expiration_date":"2019-09-12" }

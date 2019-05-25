@@ -1,0 +1,4 @@
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "role":"breadwinner", "salary": 1700.0}
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "role":"cashier", "salary": 1500.0}
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "role":"vet", "salary": 2500.0}
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "role":"cleaner", "salary": 1500.0}

@@ -1,0 +1,8 @@
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "portion":"10" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "portion":"3" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "portion":"5" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "portion":"2" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f65"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f61"}, "portion":"2" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f66"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f62"}, "portion":"1.5" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f67"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f63"}, "portion":"3" }
+{"_id":{"$oid": "5ce8630e7130b4193cfc8f68"}, "meal_id":{"$oid": "5ce8630e7130b4193cfc8f64"}, "portion":"1" }
